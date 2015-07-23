@@ -1,0 +1,29 @@
+<span id="signinButton">
+  ...
+</span>
+<script type="text/javascript">
+(function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/client:plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+    function signinCallback(authResult) {
+      if (authResult['access_token']) {
+      } else if (authResult['error']) {
+      }
+    }
+    function disconnectUser(access_token) {
+      var revokeUrl = 'https://accounts.google.com/o/oauth2/revoke?token=' + access_token;
+      $.ajax({
+        type: 'GET',
+        url: revokeUrl,
+        async: false,
+        contentType: "application/json",
+        dataType: 'jsonp',
+        success: function(nullResponse) {
+        },
+        error: function(e) {        }
+      });
+    }
+    $('#revokeButton').click(disconnectUser);
+  </script>
