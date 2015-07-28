@@ -1,0 +1,31 @@
+<head>
+…
+<script type="text/javascript">
+          (function() {
+              var useSSL = 'https:' == document.location.protocol;
+              var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+              document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+          })();
+</script>
+<script type="text/javascript">
+              googletag.pubads().set("adsense_background_color", "FFFFFF");
+</script>
+<script>
+    googletag.defineSlot("/1234/travel/asia/food", [728, 90], "div-gpt-ad-123456789-0")
+        .addService(googletag.pubads())
+        .setTargeting("interests", ["sports", "music", "movies"]);
+   googletag.pubads().setTargeting("topic", "basketball");
+   googletag.pubads().enableSingleRequest();
+   googletag.enableServices();
+</script>
+...
+</head>
+<body>
+..
+    <div id="div-gpt-ad-123456789-0" style="width: width; height: height;">
+      <script type="text/javascript">
+              googletag.display("div-gpt-ad-123456789-0");
+      </script>
+    </div>
+    ..
+</body>
