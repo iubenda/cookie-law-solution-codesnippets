@@ -1,8 +1,35 @@
-<div id="DIV-ID" class="CLASS-DIV">
-    <ul id="UL-ID" class="CLASS-UL">
-        <li id="LI-ID" class="CLASS-LI">
-          <a target="_blank" href="http://www.tripadvisor.co.uk/"><img class="_iub_cs_activate" src="data:text/html;base64,PGh0bWw+PGJvZHk+U3VwcHJlc3NlZDwvYm9keT48L2h0bWw+" suppressedsrc="http://www.tripadvisor.co.uk/img/cdsi/img2/branding/medium-logo-12097-2.png" alt="TripAdvisor"/></a>
-        </li>
-      </ul>
-    </div>
-    <script type="text/plain" class="_iub_cs_activate" src="http://www.jscache.com/wejs?wtype=TYPE&amp;uniq=UNIQ&amp;locationId=LocationId&amp;lang=en_UK&amp;border=false&amp;langversion=2"></script>
+<head>
+  _iub.csConfiguration = {
+         ...
+         reloadOnConsent: true
+         ... 
+      };
+</head>
+
+<body>
+  ...
+  <script type='text/javascript'>
+    function isConsentGiven() {
+        if('consentIsGiven' in window && (consentIsGiven === true || consentIsGiven === false)) return consentIsGiven;
+        if(!('_iub' in window && 'csConfiguration' in _iub)) return false;
+        var siteId = _iub.csConfiguration.siteId || '';
+        var cookiePolicyId = _iub.csConfiguration.cookiePolicyId || '';
+        var cs = document.cookie.split(';');
+        var consentIsGiven = false;
+        for (var i = 0; i < cs.length; i++) {
+            while (cs[i].charAt(0) == ' ') cs[i] = cs[i].substring(1);
+            if(cs[i].indexOf('_iub_cs-s'+ siteId) == 0||cs[i].indexOf('_iub_cs-'+ cookiePolicyId) == 0) {
+                consentIsGiven = true;
+                break;
+            }
+        }
+        window.consentIsGiven = consentIsGiven;
+        return consentIsGiven;
+    }
+</script>
+    <script>
+        if(isConsentGiven()){
+            document.write('<div id="DIV-ID" class="CLASS-DIV"><ul id="UL-ID" class="CLASS-UL"><li id="LI-ID" class="CLASS-LI"><a target="_blank" href="http://www.tripadvisor.co.uk/"><img class="_iub_cs_activate" src="data:text/html;base64,PGh0bWw+PGJvZHk+U3VwcHJlc3NlZDwvYm9keT48L2h0bWw+" suppressedsrc="http://www.tripadvisor.co.uk/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor"\/><\/a><\/li><\/ul><\/div>');
+            document.write('<script src="http://www.jscache.com/wejs?wtype=cdswritereviewlg&amp;uniq=YOUR-UNIQ&amp;locationId=YOUR-LOCATION&amp;lang=en_UK&amp;border=false&amp;langversion=2"><\/script>');
+        }
+    </script>
