@@ -7,8 +7,8 @@
          callback:{
                   onConsentGiven: function(){
                     var t = 1;
-                    $('._iub_cs_activate_google_ads').each(function() {
-                        var banner = $(this);
+                    jQuery('._iub_cs_activate_google_ads').each(function() {
+                        var banner = jQuery(this);
                         setTimeout(function(){
                             var client = banner.data('client');
                             var slot = banner.data('slot');
