@@ -1,0 +1,43 @@
+<script type="text/javascript">
+          function isConsentGiven() {
+              if('consentIsGiven' in window && (consentIsGiven === true || consentIsGiven === false))
+ 		return consentIsGiven;
+              if(!('_iub' in window && 'csConfiguration' in _iub)) return false;
+              var siteId = _iub.csConfiguration.siteId || '';
+              var cookiePolicyId = _iub.csConfiguration.cookiePolicyId || '';
+              var cs = document.cookie.split(';');
+              var consentIsGiven = false;
+              for (var i = 0; i < cs.length; i++) {
+                  while (cs[i].charAt(0) == ' ') cs[i] = cs[i].substring(1);
+                  if(cs[i].indexOf('_iub_cs-s'+ siteId) == 0||cs[i].indexOf('_iub_cs-'+ cookiePolicyId) == 0) {
+                      consentIsGiven = true;
+                      break;
+                  }
+              }
+              window.consentIsGiven = consentIsGiven;
+              return consentIsGiven;
+          }
+</script>
+
+<script type="text/javascript">
+          (function() {
+              var useSSL = 'https:' == document.location.protocol;
+              var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+              document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+          })();
+</script>
+<script type="text/javascript">
+              googletag.pubads().set("adsense_background_color", "FFFFFF");
+</script>
+<script>
+    if(isConsentGiven())
+         googletag.pubads().setCookieOptions(0);
+    else
+         googletag.pubads().setCookieOptions(1);
+    googletag.defineSlot("/1234/travel/asia/food", [728, 90], "div-gpt-ad-123456789-0")
+        .addService(googletag.pubads())
+        .setTargeting("interests", ["sports", "music", "movies"]);
+   googletag.pubads().setTargeting("topic", "basketball");
+   googletag.pubads().enableSingleRequest();
+   googletag.enableServices();
+</script>
