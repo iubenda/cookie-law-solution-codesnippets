@@ -4,6 +4,3 @@ var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var
 for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
 mixpanel.init("YOUR TOKEN");
 </script>
-    <a href="http://www.shinystat.com" target="_top">
-    <img src="http://www.shinystat.com/cgi-bin/shinystat.cgi?USER=USER" alt="Free blog counters" border="0"></a>
-    </noscript>
