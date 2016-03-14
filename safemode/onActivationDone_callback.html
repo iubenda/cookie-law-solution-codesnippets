@@ -1,9 +1,12 @@
 <head>
  ...
- // other options
-callback: onActivationDone: function(){
-   …
-   // this call back is executed when all the snippets are activated
-},
+ _iub.csConfiguration = {
+    // other options
+    callback: {
+      onActivationDone: function(){
+       // this call back is invoked when all the snippets are activated
+      }
+    }
+ }
  ...
 </head>
