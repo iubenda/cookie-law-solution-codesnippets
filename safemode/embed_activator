@@ -1,0 +1,16 @@
+<script type="text/javascript">
+  	var _iub = _iub || [];
+  _iub.csConfiguration = {
+    cookiePolicyId: XxX,
+    siteId: YyY,
+    // other config options...
+  };
+_iub.csConfiguration.safeTimeout = 2000; // Custom option for Safemode
+_iub.csConfiguration.forceSafeActivation = false; // Custom option for Safemode
+</script>
+<script type="text/javascript">
+//<![CDATA[
+// copy content from cdn.iubenda.com/cookie_solution/safemode/safe.js and paste here.
+//]]>
+</script>
+<script type="text/javascript" src= "//cdn.iubenda.com/cookie_solution/safemode/iubenda_cs.js" charset="UTF-8" async></script>
