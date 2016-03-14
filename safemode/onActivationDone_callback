@@ -1,0 +1,9 @@
+<head>
+ ...
+ // other options
+callback: onActivationDone: function(){
+   …
+   // this call back is executed when all the snippets are activated
+},
+ ...
+</head>
