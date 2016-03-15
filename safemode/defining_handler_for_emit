@@ -1,0 +1,11 @@
+<script>
+      _iub.csActivator.on('before-activate-snippets', function(elems){
+          console.log('before activate snippet');
+      });
+      _iub.csActivator.on('snippet-activated', function(elems){
+        console.log('snippet-activated');
+      });
+      _iub.csActivator.on('all-snippets-activated', function(elems){
+          console.log('all-snippets-activated');
+      });
+    </script>
