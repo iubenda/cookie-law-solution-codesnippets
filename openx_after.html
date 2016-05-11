@@ -1,0 +1,24 @@
+
+  <script type='text/plain' class='_iub_cs_activate-inline'>
+        var m3_u = (location.protocol=='https:'? YOUR_DELIVERY_URL : YOUR_DELIVERY_URL);
+        var m3_r = Math.floor(Math.random()*99999999999);
+        var src = m3_u+"?zoneid=10"+'&amp;cb=' + m3_r;
+        if (document.MAX_used != ',')
+            src += "&amp;exclude=" + document.MAX_used;
+        if(document.charset)
+            src +='&amp;charset='+document.charset
+        else{
+            if(document.characterSet)
+                src +='&amp;charset='+document.characterSet
+        }
+        src +="&amp;loc=" + escape(YOUR_LOC);
+        if (document.referrer) src +="&amp;referer=" + escape(document.referrer);
+        if (document.context)  src +="&context=" + escape(document.context);
+        if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+            src +="&amp;ct0=" + escape(document.MAX_ct0);
+        }
+        if (document.mmm_fo) src +="&amp;mmm_fo=1";
+        document.write ("<scr"+"ipt type='text/javascript' src='"+src+"'>");
+        document.write ("<\/scr"+"ipt>");
+
+        </script><noscript><a href='YOUR_URL' target='_blank'><img src='YOUR_TRACKING_URL' border='0' alt='' /></a></noscript>
