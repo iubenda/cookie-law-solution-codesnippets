@@ -11,12 +11,9 @@
             if(document.characterSet)
                 src +='&amp;charset='+document.characterSet
         }
-        src +="&amp;loc=" + escape(YOUR_LOC);
+        src +="&amp;loc=" + escape(window.location);
         if (document.referrer) src +="&amp;referer=" + escape(document.referrer);
         if (document.context)  src +="&context=" + escape(document.context);
-        if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
-            src +="&amp;ct0=" + escape(document.MAX_ct0);
-        }
         if (document.mmm_fo) src +="&amp;mmm_fo=1";
         document.write ("<scr"+"ipt type='text/javascript' src='"+src+"'>");
         document.write ("<\/scr"+"ipt>");
