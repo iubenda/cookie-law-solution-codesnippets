@@ -1,1 +1,3 @@
- _iub.csConfiguration.skipSaveConsent = true;
+var _iub = _iub || {};
+_iub.csConfiguration = {};
+_iub.csConfiguration.skipSaveConsent = true;
