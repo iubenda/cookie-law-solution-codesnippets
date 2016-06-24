@@ -1,0 +1,16 @@
+// manual block for CLASSIC version.
+// CUSTOMIZE renderBannerX method basing name on banner dimension or position
+
+...
+<script type="text/javascript">
+  /*<![CDATA[*/
+    function renderBannerX(){
+      // customize this method basing on banner dimensions or banner position.
+      return "<script language=\"javascript\" type=\"text/javascript\">document.write('<s'+'cript language=\"javascript\" src=\"http://ALTERVISTA-AD-SOURCE/size=300X250/?ref='+encodeURIComponent(location.hostname+location.pathname)+'\"><\/s'+'cript>');<\/script>"
+    }
+  /*]]>*/
+</script>
+<script type="text/plain" class="_iub_cs_activate-inline">
+    document.write(renderBannerX());
+</script>
+...
