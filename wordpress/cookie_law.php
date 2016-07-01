@@ -17,5 +17,5 @@
         return $html;
     }
     
-    ob_start("iubenda_invoke");
+    ob_start("iubenda_system");
 ?>
