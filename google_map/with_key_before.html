@@ -1,0 +1,10 @@
+<script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=YOUR_KEY&callback=initMap"></script>
+<script>
+  var map;
+  function initMap() {
+    map = new google.maps.Map(document.getElementById(YOUR-DIV-ID), {
+      center: {lat: YOUR_LAT, lng: YOUR_LNG},
+      zoom: YOUR_ZOOM
+    });
+  }
+</script>
