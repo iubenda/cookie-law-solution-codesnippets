@@ -1,7 +1,7 @@
 <head>
   
   .... 
-  // insert these tags scripts into tag head
+  <!-- insert these tags scripts into tag head -->
   <script>
     var _iubSlotDefined = false;
   </script>
@@ -29,7 +29,7 @@
 
   <script type="text/plain" class="_iub_cs_activate">
     googletag.cmd.push(function() {
- // desktop Skin
+    // desktop Skin
     var mappingSk = googletag.sizeMapping().addSize([768, 1024], [[1, 1]]).build();
     //var mappingLb = googletag.sizeMapping().addSize([768, 1024], [[728, 90]]).addSize([980,1024], [[970,250], [980, 90], [980, 250]]).build();
     var mappingLb = googletag.sizeMapping().addSize([768, 1024], [[728,90], [980,90], [980,250], [970,250]]).build();
@@ -45,14 +45,11 @@
     }
     if (urlkey != "")
       googletag.pubads().setTargeting("UrlKey", urlkey);
-
+    // slots will be defined in another script
     googletag.pubads().setTargeting("UrlFull", urlocation);
     googletag.pubads().setTargeting("SubCategory", "home");
 
-    /**/
-    /**/
-
-    // googletag.pubads().enableAsyncRendering();
+    // googletag.pubads().enableAsyncRendering(); // try to uncomment this to get more speed
     googletag.pubads().collapseEmptyDivs();
     googletag.enableServices();
 
@@ -67,7 +64,7 @@
 <script type="text/plain" class="_iub_cs_activate-inline" data-iub-cs-wait-for='googletag.defineSlot'>
  // declaring the slots trough defineSlot().
   if(screen.width>767){
-    // intropage and skin are commented because not used in the page.
+    // intropage and skin Ads are commented because not used in the page.
     // googletag.defineOutOfPageSlot('/38681514/Fantagazzetta/HomePage/IntropageOvl','adv_IntropageOvl').addService(googletag.pubads());
     // googletag.defineSlot('/38681514/Fantagazzetta/HomePage/Skin',[1,1],'adv_Skin').addService(googletag.pubads());
     googletag.defineSlot('/38681514/Fantagazzetta/HomePage/LdbMastheadPush',[[728,90],[980,90],[980,250],[970,250]],'adv_LdbMastheadPush').addService(googletag.pubads());
@@ -88,17 +85,17 @@
 -->
 adv_LdbMastheadPush
 <div id="adv_LdbMastheadPush">
-  <script  type="text/plain" class="_iub_cs_activate-inline" data-iub-cs-wait-for='slotDefined'>
+  <script  type="text/plain" class="_iub_cs_activate-inline" data-iub-cs-wait-for='_iubSlotDefined'>
     googletag.cmd.push(function(){googletag.display("adv_LdbMastheadPush")});
 </script>
 </div>
 <hr />
 adv_BoxTop
-<div id="adv_BoxTop"><script  type="text/plain" class="_iub_cs_activate-inline" data-iub-cs-wait-for='slotDefined'>
+<div id="adv_BoxTop"><script  type="text/plain" class="_iub_cs_activate-inline" data-iub-cs-wait-for='_iubSlotDefined'>
 googletag.cmd.push(function() {googletag.display("adv_BoxTop")});
 </script></div>
 <hr />
 adv_BoxBottom
-<div id="adv_BoxBottom"><script  type="text/plain" class="_iub_cs_activate-inline" data-iub-cs-wait-for='slotDefined'>
+<div id="adv_BoxBottom"><script  type="text/plain" class="_iub_cs_activate-inline" data-iub-cs-wait-for='_iubSlotDefined'>
 googletag.cmd.push(function() {googletag.display("adv_BoxBottom")});
 </script></div>
