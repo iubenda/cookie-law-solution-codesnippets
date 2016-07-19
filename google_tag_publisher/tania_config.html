@@ -1,0 +1,104 @@
+<head>
+  
+  .... 
+  // insert these tags scripts into tag head
+  <script>
+    var _iubSlotDefined = false;
+  </script>
+  <script type="text/plain" class="_iub_cs_activate">
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+      (function() {
+          var gads = document.createElement('script');
+          gads.async = true;
+          gads.type = 'text/javascript';
+          var useSSL = 'https:' == document.location.protocol;
+          gads.src = (useSSL ? 'https:' : 'http:') +
+              '//www.googletagservices.com/tag/js/gpt.js';
+          var node = document.getElementsByTagName('script')[0];
+          node.parentNode.insertBefore(gads, node);
+      })();
+  </script>
+
+  <script type="text/plain" class="_iub_cs_activate">
+          googletag.cmd.push(function () {
+              googletag.pubads().set("adsense_background_color", "FFFFFF");
+          });
+      </script>
+
+
+  <script type="text/plain" class="_iub_cs_activate">
+    googletag.cmd.push(function() {
+ // desktop Skin
+    var mappingSk = googletag.sizeMapping().addSize([768, 1024], [[1, 1]]).build();
+    //var mappingLb = googletag.sizeMapping().addSize([768, 1024], [[728, 90]]).addSize([980,1024], [[970,250], [980, 90], [980, 250]]).build();
+    var mappingLb = googletag.sizeMapping().addSize([768, 1024], [[728,90], [980,90], [980,250], [970,250]]).build();
+    var urlocation = document.location.href.replace('http://', '').replace('https://', '');
+    var pos = urlocation.indexOf('^');
+    var urlkey = pos != -1 ? urlocation.substr(pos + 1, urlocation.length) : "";
+
+    if (window.crtg_piemme_2) {
+      var crtg_split = crtg_piemme_2.split('&');
+      for (var i = 1; i < crtg_split.length; i++) {
+        googletag.pubads().setTargeting('' + (crtg_split[i].split('='))[0] + '', '' + (crtg_split[i].split('='))[1] + '');
+      }
+    }
+    if (urlkey != "")
+      googletag.pubads().setTargeting("UrlKey", urlkey);
+
+    googletag.pubads().setTargeting("UrlFull", urlocation);
+    googletag.pubads().setTargeting("SubCategory", "home");
+
+    /**/
+    /**/
+
+    // googletag.pubads().enableAsyncRendering();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+
+    });
+  </script>
+...
+</head>
+
+<body>
+....
+
+<script type="text/plain" class="_iub_cs_activate-inline" data-iub-cs-wait-for='googletag.defineSlot'>
+ // declaring the slots trough defineSlot().
+  if(screen.width>767){
+    // intropage and skin are commented because not used in the page.
+    // googletag.defineOutOfPageSlot('/38681514/Fantagazzetta/HomePage/IntropageOvl','adv_IntropageOvl').addService(googletag.pubads());
+    // googletag.defineSlot('/38681514/Fantagazzetta/HomePage/Skin',[1,1],'adv_Skin').addService(googletag.pubads());
+    googletag.defineSlot('/38681514/Fantagazzetta/HomePage/LdbMastheadPush',[[728,90],[980,90],[980,250],[970,250]],'adv_LdbMastheadPush').addService(googletag.pubads());
+    googletag.defineSlot('/38681514/Fantagazzetta/HomePage/BoxTop',[300,250],'adv_BoxTop').addService(googletag.pubads());
+    googletag.defineSlot('/38681514/Fantagazzetta/HomePage/BoxBottom',[[300,250],[300,251]],'adv_BoxBottom').addService(googletag.pubads());
+  }
+  else{
+    googletag.defineSlot('/38681514/Fantagazzetta/Msite/BannerArticoli',[320,250],'adv_BannerArticoli').addService(googletag.pubads());
+    googletag.defineSlot('/38681514/Fantagazzetta/Msite/BannerTop',[[320,50]],'adv_BannerTop').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/38681514/Fantagazzetta/Msite/Interstitial','adv_Interstitial').addService(googletag.pubads());
+  }
+  googletag.pubads().enableSingleRequest(); // one request for all them
+  _iubSlotDefined = true; // semaphore for iubenda
+</script>
+
+<!-- 
+  all the gtag div contaning the slot MUST have the attribute data-iub-cs-wait-for='slotDefined'
+-->
+adv_LdbMastheadPush
+<div id="adv_LdbMastheadPush">
+  <script  type="text/plain" class="_iub_cs_activate-inline" data-iub-cs-wait-for='slotDefined'>
+    googletag.cmd.push(function(){googletag.display("adv_LdbMastheadPush")});
+</script>
+</div>
+<hr />
+adv_BoxTop
+<div id="adv_BoxTop"><script  type="text/plain" class="_iub_cs_activate-inline" data-iub-cs-wait-for='slotDefined'>
+googletag.cmd.push(function() {googletag.display("adv_BoxTop")});
+</script></div>
+<hr />
+adv_BoxBottom
+<div id="adv_BoxBottom"><script  type="text/plain" class="_iub_cs_activate-inline" data-iub-cs-wait-for='slotDefined'>
+googletag.cmd.push(function() {googletag.display("adv_BoxBottom")});
+</script></div>
