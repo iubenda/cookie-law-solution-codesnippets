@@ -1,5 +1,5 @@
-**Types of Data collected**
-Among the types of Personal Data that this Application collects, by itself or through third parties, there are: Cookies and Usage Data.  
+**Types of Data collected**  
+Among the types of Personal Data that this Application collects, by itself or through third parties, there are: Cookies and Usage Data. 
 Other Personal Data collected may be described in other sections of this privacy policy or by dedicated explanation text contextually with the Data collection.  
 The Personal Data may be freely provided by the User, or collected automatically when using this Application.  
 Any use of Cookies - or of other tracking tools - by this Application or by the owners of third party services used by this Application, unless stated otherwise, serves to identify Users and remember their preferences, for the sole purpose of providing the service required by the User.  
