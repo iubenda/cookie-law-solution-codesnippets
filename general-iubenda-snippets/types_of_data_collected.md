@@ -1,7 +1,7 @@
 **Types of Data collected**  
-Among the types of Personal Data that this Application collects, by itself or through third parties, there are: Cookies and Usage Data. 
-Other Personal Data collected may be described in other sections of this privacy policy or by dedicated explanation text contextually with the Data collection.  
-The Personal Data may be freely provided by the User, or collected automatically when using this Application.  
-Any use of Cookies - or of other tracking tools - by this Application or by the owners of third party services used by this Application, unless stated otherwise, serves to identify Users and remember their preferences, for the sole purpose of providing the service required by the User.  
-Failure to provide certain Personal Data may make it impossible for this Application to provide its services.  
-Users are responsible for any Personal Data of third parties obtained, published or shared through this Application and confirm that they have the third party's consent to provide the Data to the Owner.
+Among the types of Personal Data that this Application collects, by itself or through third parties, there are: Cookies and Usage Data.  
+Complete details on each type of Personal Data collected are provided in the dedicated sections of this privacy policy or by specific explanation texts displayed prior to the Data collection.  
+The Personal Data may be freely provided by the User, or, in case of Usage Data, collected automatically when using this Application. All Data requested by this Application is mandatory and failure to provide this Data may make it impossible for this Application to provide its services. In cases where this Application specifically states that some Data is not mandatory, Users are free not to communicate this Data without any consequences on the availability or the functioning of the service.  
+Users who are uncertain about which Personal Data is mandatory are welcome to contact the Owner.  
+Any use of Cookies – or of other tracking tools – by this Application or by the owners of third party services used by this Application serves the purpose of providing the service required by the User, in addition to any other purposes described in the present document and in the Cookie Policy, if available.  
+Users are responsible for any third party Personal Data obtained, published or shared through this Application and confirm that they have the third party's consent to provide the Data to the Owner.
