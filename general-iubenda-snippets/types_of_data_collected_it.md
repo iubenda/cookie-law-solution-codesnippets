@@ -1,7 +1,8 @@
 **Tipologie di Dati raccolti**  
-Fra i Dati Personali raccolti da questa Applicazione, in modo autonomo o tramite terze parti, ci sono: [LIST OF PERSONAL DATA]  
-Altri Dati Personali raccolti potrebbero essere indicati in altre sezioni di questa privacy policy o mediante testi informativi visualizzati contestualmente alla raccolta dei Dati stessi.  
-I Dati Personali possono essere inseriti volontariamente dall’Utente, oppure raccolti in modo automatico durante l'uso di questa Applicazione.  
-L’eventuale utilizzo di Cookie - o di altri strumenti di tracciamento - da parte di questa Applicazione o dei titolari dei servizi terzi utilizzati da questa Applicazione, ove non diversamente precisato, ha la finalità di identificare l’Utente e registrare le relative preferenze per finalità strettamente legate all'erogazione del servizio richiesto dall’Utente.  
-Il mancato conferimento da parte dell’Utente di alcuni Dati Personali potrebbe impedire a questa Applicazione di erogare i propri servizi. 
+Fra i Dati Personali raccolti da questa Applicazione in modo autonomo o tramite terze parti, ci sono: [LIST OF PERSONAL DATA]  
+Dettagli completi su ciascuna tipologia di dati raccolti sono forniti nelle sezioni dedicate di questa privacy policy o mediante specifici testi informativi visualizzati prima della raccolta dei dati stessi.  
+I Dati Personali possono essere liberamente forniti dall'Utente o, nel caso di Dati di Utilizzo, raccolti automaticamente durante l'uso di questa Applicazione.  
+Tutti i Dati richiesti da questa Applicazione sono obbligatori e, in mancanza del loro conferimento, potrebbe essere impossibile per questa Applicazione fornire il servizio. Nei casi in cui questa Applicazione indichi alcuni Dati come facoltatitivi, gli Utenti sono liberi di astenersi dal comunicare tali Dati, senza che ciò abbia alcuna conseguenza sulla disponibilità del servizio o sulla sua operatività.  
+Gli Utenti che dovessero avere dubbi su quali Dati siano obbligatori, sono incoraggiati a contattare il Titolare.  
+L’eventuale utilizzo di Cookie - o di altri strumenti di tracciamento - da parte di questa Applicazione o dei titolari dei servizi terzi utilizzati da questa Applicazione, ove non diversamente precisato, ha la finalità di fornire il servizio richiesto dall'Utente, oltre alle ulteriori finalità descritte nel presente documento e nella Cookie Policy, se disponibile.  
 L'Utente si assume la responsabilità dei Dati Personali di terzi pubblicati o condivisi mediante questa Applicazione e garantisce di avere il diritto di comunicarli o diffonderli, liberando il Titolare da qualsiasi responsabilità verso terzi.
