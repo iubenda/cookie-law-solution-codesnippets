@@ -1,0 +1,34 @@
+/***************************************************************************
+// * Iubenda Cookie Solution                                               *
+// *                                                                       *
+// * (c) 2017 Iubenda srl <info@iubenda.com>                               *
+// * All Rights Reserved.                                                  *
+// *                                                                       *
+// *************************************************************************
+//
+// CHANGELOG
+// 0.0.1
+// - make !important all the default banner properties for preventing the overwriting of them by other styles existing in the page.
+*/
+
+#iubenda-cs-banner{
+}
+
+.iubenda-cs-content{
+}
+
+.iubenda-banner-content{
+
+}
+
+.iubenda-cs-rationale{
+}
+
+.iubenda-banner-content > p {
+}
+
+.iubenda-cs-close-btn{
+}
+
+.iubenda-cs-cookie-policy-lnk{
+}
