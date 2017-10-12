@@ -1,5 +1,257 @@
 <head>
-  {% snippet "meta_tag" %}
-  {% snippet "title" %}
-  {% snippet "css_inclusion" %}
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>{{ title }}</title>
+<style type="text/css">
+/***********
+ The MailChimp Reset from Fabio Carneiro, MailChimp User Experience Design
+ More info and templates on Github: https://github.com/mailchimp/Email-Blueprints
+ http://www.mailchimp.com &amp; http://www.fabio-carneiro.com
+ 
+ INLINE: Yes.
+***********/  
+
+    /* Client-specific Styles */
+    #outlook a { padding: 0; } /* Force Outlook to provide a "view in browser" button. */
+    body { width: 100% !important; } .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; } /* Force Hotmail to display emails at full width */
+    body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; } /* Prevent Webkit and Windows Mobile platforms from changing default font sizes. */
+
+    /* Reset Styles */
+    body { margin: 0; padding: 0; }
+    img { height: auto; line-height: 100%; outline: none; text-decoration: none; }
+a img { border:none; } /* Remove borders from emails in links. To remove in Lotus 6/7, add border="0" on the img tag aswell */
+    #backgroundTable { margin: 0; padding: 0; width: 100% !important; }
+
+/** End Mail Chimp Reset **/ 
+
+/** Yahoo paragraph fix: removes the proper spacing or the paragraph (p) tag. To correct we set the top/bottom margin to 1em in the head of the document. Simple fix with little effect on other styling. You do not need to move this inline. NOTE: It is also common to use two breaks instead of the paragraph tag but I think this way is cleaner and more semantic. NOTE: This example recommends 1em or 1.12 em. More info on setting web defaults: http://www.w3.org/TR/CSS21/sample.html or http://meiert.com/en/blog/20070922/user-agent-style-sheets/
+   
+   INLINE: Yes.
+   **/
+   
+   p {
+       margin: 0;
+       padding: 0 15px 10px 15px;
+       line-height: 150%;
+   }
+      
+   /** Hotmail header color reset: Hotmail replaces your header color styles with a green color on H2, H3, H4, H5, and H6 tags. In this example, the color is reset to black for a non-linked header, blue for a linked header, red for an active header (limited support), and purple for a visited header (limited support).  Replace with your choice of color. The !important is really what is overriding Hotmail's styling. Hotmail also sets the H1 and H2 tags to the same size. 
+   
+   INLINE: Yes.
+   **/
+   
+   h1, h2, h3, h4, h5, h6 {
+       color: #59636D !important;
+       line-height: 110% !important;
+       margin: 0;
+   }
+   
+   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+       color: blue !important;
+   }
+   
+   h2 {
+   	font-size: 17px;
+   }
+   h3 {
+   	font-size: 13px;
+   }   
+   
+   
+   /* Custom code */
+  
+  
+	table {
+   	color: #5A6068;
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		font-size: 13px;
+	}
+	.main_container {
+		padding: 10px 0; 
+		border: 1px solid #BFC0C0;
+		-webkit-border-radius: 6px; 
+		-moz-border-radius: 6px; 
+		border-radius: 6px;
+		-webkit-box-shadow: 0 1px 0 #ebebec;
+		-moz-box-shadow: 0 1px 0 #ebebec;
+		box-shadow: 0 1px 0 #ebebec;
+	}
+	.box_img {
+		-webkit-box-shadow: 0 1px 1px -1px #a3a3a3;
+		-moz-box-shadow: 0 1px 1px -1px #a3a3a3;
+		box-shadow: 0 1px 1px -1px #a3a3a3;
+		-webkit-border-radius: 1px;
+		-moz-border-radius: 1px;
+		border-radius: 1px;
+		border: 1px solid #D2D2D3;
+		border-collapse: separate;
+		padding: 5px;
+		margin: 0 15px 10px 15px;
+	}
+	.box_img img {
+		border: 1px solid #DEDEDE;
+		padding: 0;
+		margin: 0;
+		display: block;
+	}
+	.box_img.half {
+		
+	}
+	.box_img_2 {
+		padding: 5px;
+		margin: 10px 20px 20px 20px;
+		display: block;
+		border: none;
+	}
+	.btn {
+		color: #FFFFFF;
+		background-color: #018FF3;
+		-webkit-box-shadow: inset 0 0 0 1px #48aef6,0 1px 0 #cccccc;
+		box-shadow: inset 0 0 0 1px #48aef6, 0 1px 0 #cccccc;
+		text-shadow: 0 1px 1px #0493F6;
+		border: 1px solid #0C6EB3;
+		text-align: center;
+		font-weight: bold;
+		padding: 14px 20px;
+		line-height: 1.5;
+		border-radius: 3px;
+		border-collapse: separate;
+		display: inline-block;
+		text-decoration: none;
+	}
+	a {
+		text-decoration: none;
+		line-height: inherit;
+		font-weight: bold;
+		border-bottom: 1px solid #DADADA;
+		color: #006DB4;
+	}
+	.contacts p {
+		padding: 10px 0 0 0;
+		font-size: 13px
+	}
+	.contacts a {
+		color: #59636D;
+		margin-left: 8px;
+	}
+	.contacts span {
+		margin-right: 20px;
+		display: inline-block;
+		line-height: 30px;
+	}
+	.contacts img {
+		margin-bottom: -3px;
+	}
+	
+	.top_right_text {
+		padding-right: 40px;
+		padding-top: 10px;
+		display: block;
+	}
+	
+	.credits {
+		line-height: 170%;
+	}
+	.credits a {
+		color: #868E97;
+	}
+	
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		line-height: 1.6;
+	}
+	li strong {
+		display: inline-block;
+		width: 120px;
+		text-align: right;
+		padding-right: 10px;
+	}
+	
+	ul.styled {
+		list-style: disc;
+		margin: 5px 10px 15px 40px;
+	}
+	
+	ul.styled li {
+		list-style: disc;
+	}
+	
+	.footer_table {
+		margin-top: 30px;
+	}
+	
+	.footer_table p {
+		padding: 0 40px;
+	}
+	
+	.tagline {
+		text-transform: uppercase;
+		color: #B1B1B1;
+		line-height: 25px;
+		font-size: 11px;
+	}
+	
+	.small_top_text {
+		text-align: center;
+		text-transform: uppercase;
+		color: #B1B1B1;
+		font-size: 11px;
+	}
+	tr {
+		text-align: left;
+	}
+</style>
+<style media="only screen and (max-device-width: 480px)" type="text/css">
+  /**/
+  @media only screen and (max-device-width: 480px) {
+	  .w600 {
+	  	width: 400px !important;
+	  }
+	  .w500 {
+	  	width: 300px !important;
+	  }
+	  .w550 {
+	  	width: 350px !important;
+	  }
+	  .w300 {
+	  	width: 200px !important;
+	  }
+	  .w400 {
+	  	width: 267px !important;
+	  }
+	  .w200 {
+	  	width: 133px !important;
+	  }
+	  .w548 {
+	  	width: 348px !important;
+	  }
+	  .img_resize {
+	  	width: 304px !important;
+	  	height: 121px !important;
+	  }
+	  .w548 > h2 {
+	  	font-size: 20px !important;
+	  }
+	  .w548 > p {
+	  	font-size: 16px !important;
+	  }
+	  .center_small {
+	     text-align: center;
+	  }
+	  .no_mobile {
+	  	display: none !important;
+	  }
+	  .btn + .btn {
+		  margin-top: 10px;
+	  }
+	  .big_blue_btn {
+		  width: 213px !important;
+	  }
+	} /**/
+</style>
 </head>
