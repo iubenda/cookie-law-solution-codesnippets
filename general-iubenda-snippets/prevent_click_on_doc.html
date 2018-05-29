@@ -1,0 +1,26 @@
+<script type="text/javascript">
+  var _iub = _iub || [];
+  _iub.csConfiguration = {
+    callback: {
+      onReady: function(){
+
+        if (!_iub.cs.api.isConsentGiven()){ // activate this only if consent is not given.
+
+          // remove current Cookie Solution click-on-document observer
+          document.removeEventListener('click', _iub.cs.ui.handlerClickOnDocument);
+
+          // add a new one for observe the generic click event
+          document.addEventListener("click", function(e){
+            // because we have a prevent navigation to ensure the activation first.
+            // we need to
+            var target = e.target;
+            window.location = e.target.href
+          });
+
+        }
+      }
+    },
+    consentOnScroll: false   // uncomment this for give consent by scrolling the page
+    // other opts 
+  };
+</script>
