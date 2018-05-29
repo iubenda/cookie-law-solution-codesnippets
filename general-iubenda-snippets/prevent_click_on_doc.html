@@ -3,7 +3,7 @@
   _iub.csConfiguration = {
     callback: {
       onReady: function(){
-
+        // this couldn't work for Classic version: Use only Safemode
         if (!_iub.cs.api.isConsentGiven()){ // activate this only if consent is not given.
 
           // remove current Cookie Solution click-on-document observer
@@ -20,7 +20,8 @@
         }
       }
     },
-    consentOnScroll: false   // uncomment this for give consent by scrolling the page
+    consentOnScroll: false   // uncomment this for giving consent with scroll event
     // other opts 
   };
+  
 </script>
