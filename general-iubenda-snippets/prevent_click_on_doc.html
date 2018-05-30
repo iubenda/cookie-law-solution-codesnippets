@@ -3,16 +3,15 @@
   _iub.csConfiguration = {
     callback: {
       onReady: function(){
-        // this couldn't work for Classic version: Use only Safemode
+        // this won't work for the Classic version: Use only in Safemode
         if (!_iub.cs.api.isConsentGiven()){ // activate this only if consent is not given.
 
           // remove current Cookie Solution click-on-document observer
           document.removeEventListener('click', _iub.cs.ui.handlerClickOnDocument);
 
-          // add a new one for observe the generic click event
+          // add a new one for observing the generic click event
           document.addEventListener("click", function(e){
-            // because we have a prevent navigation to ensure the activation first.
-            // we need to
+            // we need to do this because we're preventing navigation to ensure the activation first.
             var target = e.target;
             if ( typeof e.target.href !== 'undefined'){
               window.location = e.target.href
@@ -22,8 +21,8 @@
         }
       }
     },
-    consentOnScroll: false   // uncomment this for giving consent with scroll event
-    // other opts 
+    // consentOnScroll: false // uncomment this to allow 'scroll to consent' event
+    // other options 
   };
   
 </script>
