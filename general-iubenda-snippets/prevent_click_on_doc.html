@@ -14,7 +14,9 @@
             // because we have a prevent navigation to ensure the activation first.
             // we need to
             var target = e.target;
-            window.location = e.target.href
+            if ( typeof e.target.href !== 'undefined'){
+              window.location = e.target.href
+            }
           });
 
         }
