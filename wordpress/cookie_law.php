@@ -1,4 +1,3 @@
-```php
 <?php
 function iubenda_system( $html, $type = 'page' ) {
 	if ( empty( $html ) )
@@ -12,4 +11,3 @@ function iubenda_system( $html, $type = 'page' ) {
 	// finished
 	return $html;
 }
-```
