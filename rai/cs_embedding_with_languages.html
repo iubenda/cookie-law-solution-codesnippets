@@ -1,0 +1,45 @@
+<script type="text/javascript">
+      var _iubendaBannerContent = (function(){
+        // keep the global space non polluted
+        function getCurrentLanguage(){
+          var defaultLang = 'italiano';
+          var availableLanguages = ['trail', 'fjk', 'tagesschau'];
+
+          for (index = 0; index < availableLanguages.length; index++) {
+            if (window.location.pathname.toLowerCase().indexOf(availableLanguages[index]) != -1) {
+              return availableLanguages[index];
+            }
+          }
+
+          return defaultLang;
+        }
+
+        var bannerContents = {
+          'italiano': "<div class='row'><div align='center' class='columns'>Il sito Rai utilizza cookie tecnici o assimiliati e cookie di profilazione di terze parti in forma aggregata, per rendere pi&ugrave; agevole la navigazione,<br /> garantire la fruizione dei servizi e se vuoi saperne di pi&ugrave; o negare il consenso a tutti o ad alcuni cookie <a style='text-decoration:none; color:#afb7ba;  font-size:14px;' href='https://www.iubenda.com/privacy-policy/844946/cookie-policy' class='iubenda-cs-cookie-policy-lnk'>clicca qui</a>. <br /> Chiudendo questo banner, scorrendo questa pagina o cliccando qualunque suo elemento acconsenti all'uso dei cookie.</div></div>",
+          'trail': "<div class='row'><div align='center' class='columns'>Le  sit  RAI  adora  cookies  tecnics  o  assimiliá  y  cookies  de  profilaziun  de  pertes  terzes  te  na  forma  agregada,  a  na  moda  che  al  sides  plö  saurí  da  navighé  y  por  garantí  le  funzionamënt  di  sorvisc.<br /> Por  informaziuns  plö  monüdes  o  por  refodé  le  consëns  a  düc  o  a  n  valgügn  cookies <a style='text-decoration:none; color:#afb7ba;  font-size:14px;' href='https://www.iubenda.com/privacy-policy/844946/cookie-policy' class='iubenda-cs-cookie-policy-lnk'> cliché  chiló</a>. <br /> Stlujan  chësc  banner,  jan  inant  sön  la  plata  o  clican  sön  un  di  elemënc,  vëgnel  dé  l’aprovaziun  al’adoranza  di  cookies.</div></div>",
+          'fjk': "<div class='row'><div align='center' class='columns'>Spletna  stran  Rai  uporablja  piškotke  z  namenom  zagotavljanja  spletne  storitve,  analizo  uporabe,  oglasnih  sistemov  in  funkcionalnosti, ki  jih  brez  piškotkov  ne  bi  mogli  nuditi. <br />Če  želite  izvedeti  večali  ne  dovoljujete  nekaterih  ali  vseh  piškotkov <a style='text-decoration:none; color:#afb7ba;  font-size:14px;' href='https://www.iubenda.com/privacy-policy/844946/cookie-policy' class='iubenda-cs-cookie-policy-lnk'> kliknite  tukaj</a>. Z  nadaljnjo  uporabo  spletne  strani  soglašate  s  piškotki.</div></div>",
+          'tagesschau': "<div class='row'><div align='center' class='columns'>Der  Internetdienst  der  Rai  verwendet  Cookies,  um  Ihnen  ein  schnelles  und  zielgenaues  Surfen  zu  ermöglichen. Cookies  können  auch  von  Dritten  verwendet  werden.   <br />  Bei  einer  weiteren  Nutzung  unserer  Website  stimmen  Sie  der  Verwendung  von  Cookies  auf  Ihrem  Gerät  zu.  <br /> Informationen  zu  den  verwendeten  Cookies  oder  zu  deren  gezielten  oder  generellen  Deaktivierung  finden  Sie <a style='text-decoration:none; color:#afb7ba; font-size:14px;' href='https://www.iubenda.com/privacy-policy/844946/cookie-policy' class='iubenda-cs-cookie-policy-lnk'>Hier</a></div></div>"
+        }
+        var languageFound = getCurrentLanguage();
+
+        return bannerContents[languageFound];
+      })();
+
+      var _iub = _iub || [];
+      _iub.csConfiguration = {
+        cookiePolicyId: 844946,
+        siteId: 247314,
+        enableRemoteConsent: true,
+        lang: "it",
+        banner: {
+          content: _iubendaBannerContent,
+          prependOnBody:true,
+          applyStyles: false
+        }
+      };
+      (function (w, d) {
+          var loader = function () { var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/cookie_solution/iubenda_cs.js"; tag.parentNode.insertBefore(s, tag); };
+          if (w.addEventListener) { w.addEventListener("load", loader, false); } else if (w.attachEvent) { w.attachEvent("onload", loader); } else { w.onload = loader; }
+      })(window, document);
+
+    </script>
