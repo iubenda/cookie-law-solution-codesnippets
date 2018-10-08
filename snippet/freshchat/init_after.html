@@ -1,0 +1,27 @@
+<script type="text/plain" src="https://wchat.freshchat.com/js/widget.js" class="_iub_cs_activate-inline"></script>
+<script type="text/plain" class="_iub_cs_activate-inline">
+
+    function loadFcWidget(){
+      window.fcWidget.init({
+        token: "6946a656-b4d1-4304-80ca-a527ec430aa5",
+        host: "https://wchat.freshchat.com",
+        locale: "it",
+        config: {
+          hideFAQ: true,
+          headerProperty: {
+            hideChatButton: true,
+            direction: "ltr"
+          }
+        }
+      });
+      window.fcWidget.user.setLocale('it');
+    };
+
+    var fcWidgetInterval = setInterval(function(){
+        // wait fcWidget variable to be initialized
+        if (typeof window.fcWidget != undefined){
+          loadFcWidget();
+          clearInterval(fcWidgetInterval);
+        }
+      }, 200);
+</script>
