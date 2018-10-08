@@ -3,18 +3,13 @@
 
     function loadFcWidget(){
       window.fcWidget.init({
-        token: "6946a656-b4d1-4304-80ca-a527ec430aa5",
+        token: TOKEN,
         host: "https://wchat.freshchat.com",
-        locale: "it",
+        locale: LANG,
         config: {
-          hideFAQ: true,
-          headerProperty: {
-            hideChatButton: true,
-            direction: "ltr"
-          }
+          ....
         }
       });
-      window.fcWidget.user.setLocale('it');
     };
 
     var fcWidgetInterval = setInterval(function(){
