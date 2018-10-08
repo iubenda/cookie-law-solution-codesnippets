@@ -12,7 +12,7 @@
       window.fcWidget.user.setLocale('it');
     };
     var fcWidgetInterval = setInterval(function(){
-      // wait fcWidget variable to be initialized
+      // wait for the 'fcWidget' variable to be initialized
       if (typeof window.fcWidget != undefined){
         loadFcWidget();
         clearInterval(fcWidgetInterval);
