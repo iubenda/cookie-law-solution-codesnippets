@@ -1,21 +1,12 @@
 <script type="text/javascript" src="https://wchat.freshchat.com/js/widget.js"></script>
 <script type="text/javascript">
-    function loadFcWidget(){
-       window.fcWidget.init({
-        token: TOKEN,
-        host: "https://wchat.freshchat.com",
-        locale: LANG,
-        config: {
-          ....
-        }
-      });
-      window.fcWidget.user.setLocale('it');
-    };
-    var fcWidgetInterval = setInterval(function(){
-      // wait for the 'fcWidget' variable to be initialized
-      if (typeof window.fcWidget != undefined){
-        loadFcWidget();
-        clearInterval(fcWidgetInterval);
-      }
-    }, 200);
+   window.fcWidget.init({
+    token: TOKEN,
+    host: "https://wchat.freshchat.com",
+    locale: LANG,
+    config: {
+      ....
+    }
+  });
+  window.fcWidget.user.setLocale('it');
 </script>
