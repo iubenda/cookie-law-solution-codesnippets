@@ -14,7 +14,7 @@
 
     var fcWidgetInterval = setInterval(function(){
         // wait for the 'fcWidget' variable to be initialized
-        if (typeof window.fcWidget != undefined){
+        if (typeof window.fcWidget !== 'undefined'){
           loadFcWidget();
           clearInterval(fcWidgetInterval);
         }
