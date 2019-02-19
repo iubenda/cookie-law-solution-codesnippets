@@ -8,6 +8,6 @@ function startIubendaBadge() {
 	};
 
 	var aLink = $('<a href="https://www.iubenda.com/privacy-policy/Xxxxxx" class="iubenda-black iubenda-embed" title="Privacy Policy ">Privacy Policy</a>');
-	$('#element-id-containing-badge').append(Alink);
+	$('#element-id-containing-badge').append(aLink);
 	loadIubendaBadge();
 };
