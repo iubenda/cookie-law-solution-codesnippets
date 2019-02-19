@@ -7,7 +7,7 @@ function startIubendaBadge() {
   	  tag.parentNode.insertBefore(s, tag);
 	};
 
-	var Alink = $('<a href="https://www.iubenda.com/privacy-policy/PRIVACY-POLICY-ID" class="iubenda-black iubenda-embed" title="Privacy Policy ">Privacy Policy</a>');
+	var aLink = $('<a href="https://www.iubenda.com/privacy-policy/Xxxxxx" class="iubenda-black iubenda-embed" title="Privacy Policy ">Privacy Policy</a>');
 	$('#element-id-containing-badge').append(Alink);
 	loadIubendaBadge();
 };
