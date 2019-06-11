@@ -10,6 +10,15 @@
 //
 // CHANGELOG
 // 
+// 2.0.3 - 2019-05-24
+// - Introduce new positioning options
+// 
+// 2.0.2 - 2019-05-02
+// - Fix text spaces when custom content
+//
+// 2.0.1 - 2019-04-09
+// - Add rules for buttons group
+//
 // 2.0.0 - 2019-02-01
 // - Full rewrite to accommodate the new markup
 // 
@@ -27,6 +36,8 @@ IMPORTANT: Changing the following values may prevent the notice from being displ
 
 #iubenda-cs-banner {
   font-size: 15px !important;
+  background: none !important;
+  line-height: 1.4 !important;
   position: fixed !important;
   z-index: 99999998 !important;
   top: 0 !important;
@@ -37,13 +48,16 @@ IMPORTANT: Changing the following values may prevent the notice from being displ
   margin: 0 !important;
   padding: 0 !important;
   overflow: hidden !important;
-  display: block !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
   -webkit-transition: opacity 0.4s ease, visibility 0.4s ease !important;
   -o-transition: opacity 0.4s ease, visibility 0.4s ease !important;
   transition: opacity 0.4s ease, visibility 0.4s ease !important;
+  /* default */
 }
 
 #iubenda-cs-banner * {
@@ -159,14 +173,52 @@ IMPORTANT: Changing the following values may prevent the notice from being displ
   -webkit-transform-style: flat !important;
   transform-style: flat !important;
   word-break: normal !important;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
-#iubenda-cs-banner.iubenda-cs-top .iubenda-cs-container {
+#iubenda-cs-banner.iubenda-cs-overlay:before {
+  content: "" !important;
+  position: fixed !important;
   top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  z-index: 1 !important;
 }
 
-#iubenda-cs-banner.iubenda-cs-bottom .iubenda-cs-container {
-  bottom: 0 !important;
+#iubenda-cs-banner.iubenda-cs-center {
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
+
+#iubenda-cs-banner.iubenda-cs-top {
+  -webkit-box-align: start !important;
+  -ms-flex-align: start !important;
+  align-items: flex-start !important;
+}
+
+#iubenda-cs-banner.iubenda-cs-bottom {
+  -webkit-box-align: end !important;
+  -ms-flex-align: end !important;
+  align-items: flex-end !important;
+}
+
+#iubenda-cs-banner.iubenda-cs-left {
+  -webkit-box-pack: start !important;
+  -ms-flex-pack: start !important;
+  justify-content: flex-start !important;
+}
+
+#iubenda-cs-banner.iubenda-cs-right {
+  -webkit-box-pack: end !important;
+  -ms-flex-pack: end !important;
+  justify-content: flex-end !important;
 }
 
 #iubenda-cs-banner.iubenda-cs-visible {
@@ -187,15 +239,15 @@ IMPORTANT: Changing the following values may prevent the notice from being displ
 }
 
 #iubenda-cs-banner.iubenda-cs-slidein.iubenda-cs-top .iubenda-cs-container {
-  -webkit-transform: translateY(-3rem) !important;
-  -ms-transform: translateY(-3rem) !important;
-  transform: translateY(-3rem) !important;
+  -webkit-transform: translateY(-48px) !important;
+  -ms-transform: translateY(-48px) !important;
+  transform: translateY(-48px) !important;
 }
 
 #iubenda-cs-banner.iubenda-cs-slidein.iubenda-cs-bottom .iubenda-cs-container {
-  -webkit-transform: translateY(3rem) !important;
-  -ms-transform: translateY(3rem) !important;
-  transform: translateY(3rem) !important;
+  -webkit-transform: translateY(48px) !important;
+  -ms-transform: translateY(48px) !important;
+  transform: translateY(48px) !important;
 }
 
 #iubenda-cs-banner.iubenda-cs-slidein.iubenda-cs-visible .iubenda-cs-container {
@@ -205,12 +257,8 @@ IMPORTANT: Changing the following values may prevent the notice from being displ
 }
 
 #iubenda-cs-banner .iubenda-cs-container {
-  position: fixed !important;
+  position: relative !important;
   z-index: 2 !important;
-  -webkit-transform-style: preserve-3d !important;
-  transform-style: preserve-3d !important;
-  -webkit-perspective: 1000px !important;
-  perspective: 1000px !important;
 }
 
 #iubenda-cs-banner .iubenda-cs-content {
@@ -222,8 +270,6 @@ IMPORTANT: Changing the following values may prevent the notice from being displ
   -o-transition: transform 0.4s ease !important;
   transition: transform 0.4s ease !important;
   transition: transform 0.4s ease, -webkit-transform 0.4s ease !important;
-  background-color: #000000 !important;
-  color: #FFFFFF !important;
 }
 
 #iubenda-cs-banner .iubenda-cs-rationale {
@@ -232,10 +278,16 @@ IMPORTANT: Changing the following values may prevent the notice from being displ
 
 #iubenda-cs-banner .iubenda-cs-close-btn {
   position: absolute !important;
-  top: -1rem !important;
+  top: -16px !important;
+  padding: 16px !important;
   right: 0 !important;
-  padding: 1rem !important;
+  width: 48px !important;
+  height: 48px !important;
+  font-size: 24px !important;
+  line-height: 0 !important;
+  font-weight: lighter !important;
   cursor: pointer !important;
+  text-align: center !important;
 }
 
 #iubenda-cs-banner .iubenda-cs-close-btn:hover {
@@ -244,6 +296,7 @@ IMPORTANT: Changing the following values may prevent the notice from being displ
 
 #iubenda-cs-banner .iubenda-banner-content {
   font-weight: 300 !important;
+  margin: 16px !important;
 }
 
 #iubenda-cs-banner .iubenda-banner-content a {
@@ -257,23 +310,162 @@ IMPORTANT: Changing the following values may prevent the notice from being displ
   opacity: 1 !important;
 }
 
-#iubenda-cs-banner .iubenda-banner-content > * {
-  margin: 1rem !important;
+#iubenda-cs-banner #iubenda-cs-title {
+  font-weight: bold !important;
+  margin-bottom: 16px !important;
 }
 
-#iubenda-cs-banner .iubenda-cs-container {
+#iubenda-cs-banner .iubenda-cs-opt-group {
+  margin: 16px !important;
+  z-index: 1 !important;
+}
+
+#iubenda-cs-banner .iubenda-cs-opt-group button {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  padding: 8px 16px !important;
+  border-radius: 64px !important;
+  cursor: pointer !important;
+  font-weight: bold !important;
+  font-size: 100% !important;
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+}
+
+#iubenda-cs-banner .iubenda-cs-opt-group button:focus {
+  opacity: 0.8 !important;
+}
+
+#iubenda-cs-banner .iubenda-cs-opt-group button:hover {
+  opacity: 0.5 !important;
+}
+
+@media (min-width: 480px) {
+  #iubenda-cs-banner .iubenda-cs-opt-group button:not(:last-of-type) {
+    margin-right: 4px !important;
+  }
+}
+
+@media (max-width: 479px) {
+  #iubenda-cs-banner .iubenda-cs-opt-group button {
+    width: 100% !important;
+    display: block;
+    text-align: center !important;
+  }
+  #iubenda-cs-banner .iubenda-cs-opt-group button:not(:last-of-type) {
+    margin-bottom: 8px !important;
+  }
+}
+
+@media (max-width: 991px) and (max-height: 352px) {
+  #iubenda-cs-banner .iubenda-cs-opt-group {
+    -webkit-box-shadow: 0 -16px 24px currentColor !important;
+    box-shadow: 0 -16px 24px currentColor !important;
+    margin-top: 0 !important;
+  }
+  #iubenda-cs-banner .iubenda-cs-content {
+    padding: 0 !important;
+  }
+  #iubenda-cs-banner .iubenda-cs-close-btn {
+    top: 0 !important;
+  }
+  #iubenda-cs-banner .iubenda-banner-content {
+    overflow-y: scroll !important;
+    padding-right: 16px !important;
+    padding-bottom: 16px !important;
+    margin-bottom: 4px !important;
+    -webkit-box-flex: 1px !important;
+    -ms-flex: 1px !important;
+    flex: 1px !important;
+  }
+  #iubenda-cs-banner .iubenda-cs-rationale {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+  }
+}
+
+#iubenda-cs-banner.iubenda-cs-default .iubenda-cs-container {
   width: 100% !important;
 }
 
 @media (min-width: 992px) {
-  #iubenda-cs-banner .iubenda-cs-rationale {
+  #iubenda-cs-banner.iubenda-cs-default .iubenda-cs-rationale {
     width: 992px !important;
-    margin: 2rem auto !important;
+    margin: 32px auto !important;
   }
 }
 
 @media (max-width: 991px) {
-  #iubenda-cs-banner .iubenda-cs-content {
-    padding: 1rem !important;
+  #iubenda-cs-banner.iubenda-cs-default .iubenda-cs-content {
+    padding: 8px !important;
   }
+}
+
+@media (max-width: 991px) and (max-height: 352px) {
+  #iubenda-cs-banner.iubenda-cs-default .iubenda-cs-container,
+  #iubenda-cs-banner.iubenda-cs-default .iubenda-cs-content,
+  #iubenda-cs-banner.iubenda-cs-default .iubenda-cs-rationale {
+    height: 100% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  #iubenda-cs-banner.iubenda-cs-default-floating .iubenda-cs-container {
+    width: 992px !important;
+  }
+}
+
+@media (min-width: 480px) {
+  #iubenda-cs-banner.iubenda-cs-default-floating:not(.iubenda-cs-top):not(.iubenda-cs-center) .iubenda-cs-container, #iubenda-cs-banner.iubenda-cs-default-floating:not(.iubenda-cs-bottom):not(.iubenda-cs-center) .iubenda-cs-container, #iubenda-cs-banner.iubenda-cs-default-floating.iubenda-cs-center:not(.iubenda-cs-top):not(.iubenda-cs-bottom) .iubenda-cs-container {
+    width: 480px !important;
+  }
+}
+
+#iubenda-cs-banner.iubenda-cs-default-floating:not(.iubenda-cs-top):not(.iubenda-cs-center) .iubenda-cs-opt-group button, #iubenda-cs-banner.iubenda-cs-default-floating:not(.iubenda-cs-bottom):not(.iubenda-cs-center) .iubenda-cs-opt-group button, #iubenda-cs-banner.iubenda-cs-default-floating.iubenda-cs-center:not(.iubenda-cs-top):not(.iubenda-cs-bottom) .iubenda-cs-opt-group button {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+#iubenda-cs-banner.iubenda-cs-default-floating .iubenda-cs-content {
+  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.02) !important;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.02) !important;
+  border-radius: 4px !important;
+  margin: 16px !important;
+  padding: 8px !important;
+}
+
+@media (max-width: 991px) and (max-height: 352px) {
+  #iubenda-cs-banner.iubenda-cs-default-floating .iubenda-cs-content {
+    height: calc(100% - 32px) !important;
+  }
+  #iubenda-cs-banner.iubenda-cs-default-floating .iubenda-cs-container,
+  #iubenda-cs-banner.iubenda-cs-default-floating .iubenda-cs-rationale {
+    height: 100% !important;
+  }
+}
+
+#iubenda-cs-banner .iubenda-cs-content {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+
+#iubenda-cs-banner .iubenda-cs-opt-group {
+  color: #000000 !important;
+}
+
+#iubenda-cs-banner .iubenda-cs-opt-group button {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #FFFFFF !important;
+}
+
+#iubenda-cs-banner .iubenda-cs-opt-group button.iubenda-cs-btn-primary {
+  background-color: #0073CE !important;
+  color: #FFFFFF !important;
 }
