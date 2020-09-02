@@ -1,4 +1,4 @@
-<script class="_iub_cs_activate-inline" type="text/plain">
+<script class="_iub_cs_activate-inline" type="text/plain" data-iub-purposes="4">
         /* <![CDATA[ */
         var google_conversion_id =CONVERSION_ID;
         var google_conversion_label = "CONVERSION-LABEL";
@@ -6,7 +6,7 @@
         var google_remarketing_only = true;
         /* ]]> */
 </script>
-<script class="_iub_cs_activate-inline" type="text/plain" src="//www.googleadservices.com/pagead/conversion.js">
+<script class="_iub_cs_activate-inline" type="text/plain" data-iub-purposes="4" src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>
     <div style="display:inline;">

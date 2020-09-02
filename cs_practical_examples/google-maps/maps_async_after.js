@@ -1,4 +1,4 @@
-<script type="text/plain"  class="_iub_cs_activate">
+<script type="text/plain"  class="_iub_cs_activate" data-iub-purposes="3">
           function initialize() {
               var mapOptions = {
                   zoom: 8,

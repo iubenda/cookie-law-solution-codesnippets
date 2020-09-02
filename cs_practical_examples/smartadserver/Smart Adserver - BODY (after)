@@ -1,5 +1,5 @@
 <div id="sas_12345"></div>
-<script class='_iub_cs_activate' type='text/plain'>
+<script class='_iub_cs_activate' type='text/plain' data-iub-purposes="5">
     sas.cmd.push(function() {
         sas.call("std", {
             siteId: 123456,

@@ -1,5 +1,5 @@
 <script src="http://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-      <script type="text/plain" class="_iub_cs_activate">
+      <script type="text/plain" class="_iub_cs_activate" data-iub-purposes="3">
         var map;
         function initialize() {
               var mapOptions = {

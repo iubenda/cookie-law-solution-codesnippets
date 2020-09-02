@@ -1,5 +1,5 @@
 // add googletag file in tag head
-<script type="text/plain" class="_iub_cs_activate">
+<script type="text/plain" class="_iub_cs_activate" data-iub-purposes="5">
         var googletag = googletag || {};
         googletag.cmd = googletag.cmd || [];
         (function() {

@@ -5,7 +5,7 @@
        data-stream="false" data-header="false">
   </div>
   <div id="fb-root"></div>
-    <script type="text/plain" class="_iub_cs_activate">
+    <script type="text/plain" class="_iub_cs_activate" data-iub-purposes="3">
     (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;

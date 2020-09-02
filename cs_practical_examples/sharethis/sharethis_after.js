@@ -1,5 +1,5 @@
-<script type="text/plain" class="_iub_cs_activate" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/plain" >
+<script type="text/plain" class="_iub_cs_activate" data-iub-purposes="3" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/plain" data-iub-purposes="3">
 
     stLight.options({
         publisher:'insert-your-key-here'

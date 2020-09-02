@@ -1,4 +1,4 @@
-<script type="text/plain" class="_iub_cs_activate">
+<script type="text/plain" class="_iub_cs_activate" data-iub-purposes="5">
         adroll_adv_id = "XXXXXXXXXXXXXXXXXXXXXX";
         adroll_pix_id = "XXXXXXXXXXXXXXXXXXXXXX";
         (function () {

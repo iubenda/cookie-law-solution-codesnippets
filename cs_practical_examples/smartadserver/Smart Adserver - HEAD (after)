@@ -1,5 +1,5 @@
-<script class='_iub_cs_activate' type='text/plain' src="https://ced.sascdn.com/tag/5555/smart.js" async></script>
-<script class='_iub_cs_activate' type='text/plain'>
+<script class='_iub_cs_activate' type='text/plain' data-iub-purposes="5" src="https://ced.sascdn.com/tag/5555/smart.js" async></script>
+<script class='_iub_cs_activate' type='text/plain' data-iub-purposes="5">
     var sas = sas || {};
     sas.cmd = sas.cmd || [];
     sas.cmd.push(function() {

@@ -1,4 +1,4 @@
-<script type="text/plain" class="_iub_cs_activate">
+<script type="text/plain" class="_iub_cs_activate" data-iub-purposes="4">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-00000000-1']);
         _gaq.push(['_trackPageview']);
@@ -9,7 +9,7 @@
         })();
 </script>
 <!-- KISSmetrics tracking snippet -->
-<script type="text/plain"  class="_iub_cs_activate">
+<script type="text/plain"  class="_iub_cs_activate" data-iub-purposes="4">
         var _kmq = _kmq || [];
         var _kmk = _kmk || 'e76b907358e7b934865c0d9319153da8a43008c1';
         function _kms(u){

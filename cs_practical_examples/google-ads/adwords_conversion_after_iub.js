@@ -6,7 +6,7 @@
         var google_remarketing_only = true;
         /* ]]> */
 </script>
-<script class="_iub_cs_activate-inline" type="text/plain"     src="//www.googleadservices.com/pagead/conversion.js">
+<script class="_iub_cs_activate-inline" type="text/plain" data-iub-purposes="4"    src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>
     <div style="display:inline;">

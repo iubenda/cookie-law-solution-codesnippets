@@ -1,6 +1,6 @@
 <head>
 ..
-<script type="text/plain" class="_iub_cs_activate" src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script type="text/plain" class="_iub_cs_activate" data-iub-purposes="1" src="https://www.google.com/recaptcha/api.js" async defer></script>
 ..
 </head>
 <body>
