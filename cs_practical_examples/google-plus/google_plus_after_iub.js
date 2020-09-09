@@ -1,4 +1,4 @@
-<script type="text/plain" class="_iub_cs_activate">
+<script type="text/plain" class="_iub_cs_activate" data-iub-purposes="3">
 (function() {
     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
     po.src = 'https://apis.google.com/js/plusone.js';
