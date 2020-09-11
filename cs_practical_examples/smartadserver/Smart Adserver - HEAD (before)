@@ -1,0 +1,8 @@
+<script type="application/javascript" src="https://ced.sascdn.com/tag/5555/smart.js" async></script>
+<script type="application/javascript">
+    var sas = sas || {};
+    sas.cmd = sas.cmd || [];
+    sas.cmd.push(function() {
+        sas.setup({ networkid: 5555, domain: "https://www8.smartadserver.com", async: true });
+    });
+</script>

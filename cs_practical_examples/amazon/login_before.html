@@ -1,0 +1,24 @@
+<div id="amazon-root"></div>
+<button id="LoginWithAmazon" title="Login by Amazon"> login with Amazon </button>
+<script type="text/javascript">
+
+    window.onAmazonLoginReady = function() {
+        amazon.Login.setClientId('YOUR-CLIENT-ID');
+    };
+    (function(d) {
+        var a = d.createElement('script'); a.type = 'text/javascript';
+        a.async = true; a.id = 'amazon-login-sdk';
+        a.src = 'https://api-cdn.amazon.com/sdk/login1.js';
+        d.getElementById('amazon-root').appendChild(a);
+    })(document);
+
+</script>
+<script type="text/javascript">
+
+    document.getElementById('LoginWithAmazon').onclick = function() {
+        options = { scope : 'profile' };
+        amazon.Login.authorize(options, 'https://www.example.com/handle_login.php');
+        return false;
+    };
+
+</script>

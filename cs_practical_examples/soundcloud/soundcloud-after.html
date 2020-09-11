@@ -1,0 +1,39 @@
+<iframe class="_iub_cs_activate" id="sc-widget" src="http://cdn.iubenda.com/cookie_solution/empty.html" suppressedsrc="https://w.soundcloud.com/player/?url=http://api.soundcloud.com/users/USER-ID/favorites" width="100%" height="465" scrolling="no" frameborder="no"></iframe>
+    <script class="_iub_cs_activate" type="text/plain">
+        var script = document.createElement("script"), tag = document.getElementsByTagName("script")[0];
+        script.type = "text/javascript";
+        if(script.readyState) {  //IE
+            script.onreadystatechange = function() {
+              if ( script.readyState === "loaded" || script.readyState === "complete" ) {
+                script.onreadystatechange = null;
+                    callback();
+              }
+            };
+        } else {  //Others
+            script.onload = function() {
+              callback();
+            };
+        }
+        script.src = "https://w.soundcloud.com/player/api.js"
+        tag.parentNode.insertBefore(script, tag);
+        function callback(){
+            var widgetIframe = document.getElementById('sc-widget'),
+                    widget = SC.Widget(widgetIframe);
+
+            widget.bind(SC.Widget.Events.READY, function() {
+                widget.bind(SC.Widget.Events.PLAY, function() {
+                    // get information about currently playing sound
+                    widget.getCurrentSound(function(currentSound) {
+                        console.log('sound ' + currentSound.get('') + 'began to play');
+                    });
+                });
+                // get current level of volume
+                widget.getVolume(function(volume) {
+                    console.log('current volume value is ' + volume);
+                });
+                // set new volume level
+                widget.setVolume(50);
+                // get the value of the current position
+            });
+        }
+    </script>

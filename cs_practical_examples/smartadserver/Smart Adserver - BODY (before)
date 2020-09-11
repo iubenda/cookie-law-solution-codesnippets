@@ -1,0 +1,16 @@
+<div id="sas_12345"></div>
+<script type="application/javascript">
+    sas.cmd.push(function() {
+        sas.call("std", {
+            siteId: 123456,
+            pageId: 1234567,
+            formatId: 12345,
+            target: ''
+        });
+    });
+</script>
+<noscript>
+    <a href="https://www8.smartadserver.com/ac?jump=1&nwid=5555&siteid=123456&pgname=ros&fmtid=12345&visit=m&tmstp=[timestamp]&out=nonrich" target="_blank">
+        <img src="https://www8.smartadserver.com/ac?out=nonrich&nwid=5555&siteid=123456&pgname=ros&fmtid=12345&visit=m&tmstp=[timestamp]" border="0" alt="" />
+    </a>
+</noscript>

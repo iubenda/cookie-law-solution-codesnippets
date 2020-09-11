@@ -1,0 +1,22 @@
+// Alternative block snippet for Altervista.
+// If multiple banners exist in page, customize method's name basing on banner dimension or position. 
+// Eg: renderBanner300250, renderBannerHeader
+<body>
+
+...
+<script type="text/javascript">
+  /*<![CDATA[*/
+    function renderBannerX(){
+      var src = "http://ALTERVISTA-AD-SCRIPT/size=YOUR-SIZE/?ref="+encodeURIComponent(location.hostname+location.pathname);
+      var scriptClose = "<\/script>";
+      var scriptForDocWrite = '<s'+'cript language=\"javascript\" src=\"'+src+'\">';
+      return "<script type=\"text/javascript\">document.write('"+scriptForDocWrite+"');" + scriptClose;
+    }  
+  /*]]>*/
+</script>
+<script type="text/plain" class="_iub_cs_activate-inline">
+    document.write(renderBannerX());
+</script>
+...
+
+</body>
